@@ -138,7 +138,7 @@ public class ForegroundService extends Service {
             .setContentTitle(settings.optString("title", ""))
             .setContentText(settings.optString("text", ""))
             .setTicker(settings.optString("ticker", ""))
-            .setOngoing(true)
+            .setOngoing(settings.optBoolean("ongoing", true))
             .setSmallIcon(getIconResId());
 
         if (intent != null && settings.optBoolean("resume")) {
